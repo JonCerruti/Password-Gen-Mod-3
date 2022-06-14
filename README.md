@@ -21,7 +21,7 @@ Once the page is opened you will click on the Generate Password button. When the
 
 ---
 # Website Example
-![website screenshot]()
+![website screenshot](https://github.com/JonCerruti/Password-Gen-Mod-3/blob/main/Develop/images/Password-Gen-Pic.png)
 
 
 
