@@ -1,4 +1,5 @@
 // Assignment code here
+//Variables created
 var passwordLengthChar = "";
 var uppercaseChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var lowercaseChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -6,8 +7,8 @@ var numbers = [0,1,2,3,4,5,6,7,8,9];
 var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", " < ", "=", " > ", " ? ", "@", "[",  "]", " ^ ", "_", "`", "{", "|", "}", "~"]
 var chosenChar = " ";
 var characters = "";
-console.log(uppercaseChar)
-console.log(writePassword)
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -17,9 +18,9 @@ passwordLength = window.prompt("Choose Character Length Between 8 and 128");
 
 while (passwordLength < 8 || passwordLength > 128) {
   passwordLength = window.prompt("You must choose between 8 and 128 characters.");
-  
-  console.log(passwordLength);
+    console.log(passwordLength);
 }
+//New set of variables created to confirm the alert prompts
 if (passwordLengthChar = "true"){
   var uppercase = confirm("Would you like to add uppercase letters?");
   console.log("uppercase" + " " + uppercase)
@@ -30,6 +31,7 @@ if (passwordLengthChar = "true"){
   var specialChar = confirm("Would you like to add special characters?");
   console.log("special characters" + " " + specialChar)
 }
+// If all answers false go through prompts again
 if (uppercase === false && lowercase === false && numbers === false && specialChar === false){
   alert("You must select at least 1 parameter!")
   
@@ -45,7 +47,7 @@ if (uppercase === false && lowercase === false && numbers === false && specialCh
   var specialChar = confirm("Would you like to add special characters?");
   console.log("special characters" + " " + specialChar)
 }
-
+// if else statements for every combinations of answers. Concat true answers to create the choseChar variable
 if  (uppercase && lowercase && num && specialChar){
   chosenChar = uppercaseChar.concat(lowercaseChar, numbers, specialCharacters);
 }
@@ -93,12 +95,13 @@ else {chosenChar= specialCharacters;
 
 passwordBlank = [];
 
+//equation that randomizes a character until the password Length is met
 for ( var i = 0; i < passwordLength; i++ ) {
   var characters = chosenChar[Math.floor(Math.random() * chosenChar.length)];
   passwordBlank.push(characters);
 }
 
-var password =passwordBlank.join("");
+var password = passwordBlank.join("");
 
 return password
 
